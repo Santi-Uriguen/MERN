@@ -9,7 +9,6 @@ function EditTodo(props) {
     todo_completed: false,
   });
   useEffect(() => {
-    console.log(props);
     axios
       .get("http://localhost:4000/todos/" + props.match.params.id)
       .then((response) => {
@@ -23,6 +22,7 @@ function EditTodo(props) {
       .catch((error) => {
         console.log(error);
       });
+      // eslint-disable-next-line
   }, []);
 
   const onChangeTodoDescription = (e) => {

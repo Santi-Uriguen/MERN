@@ -30,7 +30,7 @@ function TodoList() {
       .catch((error) => {
         console.log(error);
       });
-  },[state]);
+  },[]);
   
   return (
     <div>
